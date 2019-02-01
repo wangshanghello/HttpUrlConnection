@@ -19,7 +19,7 @@ public class Demo {
     public static void main(String[] args) {
         String param = "success";
         String s1 = JSON.toJSONString(param);
-        String s = HttpJsonUtil.jsonPost("http://10.0.45.73:8869/medicaremgr/demo", s1, 18000);
+        String s = HttpJsonUtil.jsonPost("localhost/demo", s1, 18000);
         JSONObject jsonObject = JSONObject.parseObject(s);
         Iterator<Map.Entry<String, Object>> iterator = jsonObject.entrySet().iterator();
         while (iterator.hasNext()){
